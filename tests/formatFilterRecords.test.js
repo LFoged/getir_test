@@ -1,8 +1,9 @@
-import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
 import formatFilterRecords from '../src/utils/formatFilterRecords.js';
 
+const DEFAULT_VALUES = [{ createdAt: '', key: '', totalCount: 0 }];
+
 describe('formatFilterRecords', () => {
-    it('should return 0 for "totalcount" if counts array is empty', () => {
-        expect(formatFilterRecords({ records: [{ key: '12345', createdAt: '2020-11-10', counts: [0] }] })).toBe([0]);
+    it('returns an array with a single object of default values, when passed empty Object', () => {
+        expect(formatFilterRecords({})).toEqual(DEFAULT_VALUES);
     });
 });
