@@ -13,18 +13,18 @@ It responds to `POST` requests at URL: `https://getir-louis-foged.herokuapp.com/
 -   The endpoint `https://getir-louis-foged.herokuapp.com/api/records` accepts `POST` requests only.
 
 -   Request payload *must* contain the following key/values:
-    1.  `startDate` <string> -> format: `YYYY-MM-DD`
-    2.  `endDate` <string> -> format: `YYYY-MM-DD`
-    3.  `minCount` <number>
-    4.  `maxCount` <number>
+    1.  `startDate` [string] -> format: `YYYY-MM-DD`
+    2.  `endDate` [string] -> format: `YYYY-MM-DD`
+    3.  `minCount` [number]
+    4.  `maxCount` [number]
 
 -   The API will respond with the records in the DB that have a `createdAt` date that is between `startDate` (inclusive) and `endDate` (not included), and a `counts` array sum value between `minCount` and `maxCount` (both inclusive).
 
 -   Successful requests will return HTTP statusCode `200`, and a response payload containing the following key/values:
-    -  `code` <number> -> `0` on successful requests
-    -  `msg` <string> -> `Success` on successful requests
-    -  `totalMatches` <integer> -> total number of returned records, that match the specified date & count filters
-    -  `records` <array><objects> -> array of record objects that match the specified date & count filters
+    -  `code` [number] -> `0` on successful requests
+    -  `msg` [string] -> `Success` on successful requests
+    -  `totalMatches` [integer] -> total number of returned records, that match the specified date & count filters
+    -  `records` [array][objects] -> array of record objects that match the specified date & count filters
 
 -   Error responses will return one of the following HTTP statusCodes:
     -  `400`: invalid requests -> input error
@@ -32,10 +32,10 @@ It responds to `POST` requests at URL: `https://getir-louis-foged.herokuapp.com/
     -  `500`: server error -> unaexpected server error
 
 -   Error responses will return a payload with the following key/values:
-    -  `code`: <number> -> a non-0 response code, corresponging to the error type
-    -  `error`: <string> -> a description of the error type
-    -  `msg`: <string> -> an error message, providing more context into the error
-    -  `errors`: <array?> -> (on input validation errors) an array of objects containing info. on which fields the error(s) occurred and more details about the validation error(s)
+    -  `code`: [number] -> a non-0 response code, corresponging to the error type
+    -  `error`: [string] -> a description of the error type
+    -  `msg`: [string] -> an error message, providing more context into the error
+    -  `errors`: [array?] -> (on input validation errors) an array of objects containing info. on which fields the error(s) occurred and more details about the validation error(s)
 
 ## Running program locally
 
