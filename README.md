@@ -49,9 +49,9 @@ You need `Node.js v.14` or above, installed on your machine, to run this proram 
 
 ## Immediate improvements
 
--   Unit tests (`Jest` has compatibility issues with ES6 modules, which requires configuring).
--   Possibly enhance input validation.
--   Use a process manager (`PM2` has compatibility issues with ES6 modules, which requires configuring).
+-   More unit tests.
+-   Enhance input validation?
+-   Use a process manager (`PM2` is not compatibile with ES modules, which requires configuring).
 
 #### Author
 
