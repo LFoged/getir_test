@@ -5,8 +5,8 @@
 Solution to the 'Getir case study'.
 A `Node.js` REST API, using `express.js` framework.
 
-The app is deployed to Heroku. 
-The app will respond to `POST` requests at URL: `https://getir-louis-foged.herokuapp.com/api/records`. 
+The app is deployed to Heroku.  
+It responds to `POST` requests at URL: `https://getir-louis-foged.herokuapp.com/api/records`. 
 
 ## Overview
 
