@@ -9,9 +9,6 @@
     "test": "jest",
     "coverage": "jest --coverage"
   },
-  "jest": {
-    "transform": {}
-  },
   "engines": {
     "node": ">=14.x"
   },
