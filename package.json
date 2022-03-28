@@ -1,0 +1,26 @@
+{
+  "name": "getir_louis_foged",
+  "version": "1.0.0",
+  "description": "Code challenge for Getir",
+  "main": "./src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/main.js",
+    "test": "./node_modules/.bin/jest",
+    "coverage": "./node_modules/.bin/jest --coverage"
+  },
+  "engines": {
+    "node": ">=14.x"
+  },
+  "author": "Louis Foged",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "mongodb": "^4.4.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
