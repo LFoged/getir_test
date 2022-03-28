@@ -22,11 +22,6 @@ export default (reqBody = {}) => {
             details.push(`"${key}" should be in ${DATE_FORMAT} format.`);
         }
 
-        // check minCount <= maxCount
-        if (Number.isFinite(reqBody.minCount && reqBody.maxCount) && (reqBody.minCount > reqBody.maxCount)) {
-            details.push('"minCount" should be less than, or equal to, "maxCount".');
-        }
-
         return details.length ? [...acc, { key, details }] : acc;
     }, []);
     

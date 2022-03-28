@@ -37,7 +37,7 @@ describe('formatFilterRecords', () => {
     });
 
     // set min-/maxCount to allow 2 records to pass filter
-    it('returns array of correctly formatted records when SOME pass min-/maxCount filter', () => {
+    it('returns array with correct number of records when SOME pass min-/maxCount filter', () => {
         expect(formatFilterRecords({ ...FILTER.ALL_WRONG_INPUTS, minCount: 10, maxCount: 2000 })).toHaveLength(2);
     });
 });
