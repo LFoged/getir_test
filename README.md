@@ -2,7 +2,7 @@
 
 ## Description
 
-Solution to the 'Getir case study'.
+Solution to the 'Getir case study'.  
 A `Node.js` REST API, using `express.js` framework.
 
 The app is deployed to Heroku.  
