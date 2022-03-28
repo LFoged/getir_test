@@ -1,7 +1,6 @@
 import validateGetRecords from '../src/utils/validateGetRecords.js';
 
 const VALID_INPUT = { startDate: '2016-01-26', endDate: '2016-01-31', minCount: 5, maxCount: 3 };
-
 const ALL_ERRORS = [
     {
         key: 'startDate',
