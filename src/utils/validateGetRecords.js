@@ -7,17 +7,14 @@ export default (reqBody = {}) => {
         const input = reqBody[key];
         const details = [];
 
-        // check that key is present
         if (input === undefined) {
             details.push(`"${key}" is required.`);
         }
 
-        // check input type matches type specified in schema
         if (typeof input !== SCHEMA[key]) {
             details.push(`"${key}" should be a ${SCHEMA[key]}.`);
         }
 
-        // check date inputs are in correct format
         if ((SCHEMA[key] === 'string') && !DATE_REGEX.test(input)) {
             details.push(`"${key}" should be in ${DATE_FORMAT} format.`);
         }
