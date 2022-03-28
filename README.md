@@ -50,7 +50,7 @@ You need `Node.js v.14` or above, installed on your machine, to run this proram 
 ## Immediate improvements
 
 -   More unit tests.
--   Enhance input validation?
+-   Enhance input validation
 -   Use a process manager (`PM2` is not compatibile with ES modules, which requires configuring).
 
 #### Author
