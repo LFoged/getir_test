@@ -5,15 +5,11 @@
 Solution to the 'Getir case study'.
 A `Node.js` REST API, using `express.js` framework.
 
-This API is deployed on Heroku, at URL: `https://git.heroku.com/getir-louis-foged`.
+The app is deployed to Heroku, and will respond to `POST` requests to URL: `https://git.heroku.com/getir-louis-foged`. 
 
 ## Overview
 
--   Handles / tracks multiple currency pairs at the same time.
--   Accepts all parameters (currency pairs, fetch interval, price percentage change), as arguments.
--   Retrieves price data for specified currency pairs from [Uphold public ticker](https://uphold.com/en/developer/api/documentation/#get-tickers-for-currency-pair), at specified interval.
--   Alerts user of price percentage changes (price increase / decrease), for / above specified percentage change.
--   0 dependencies (only dev dependencies).
+-   
 
 ## Running program locally
 
