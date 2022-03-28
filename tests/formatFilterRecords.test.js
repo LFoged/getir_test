@@ -1,9 +1,11 @@
 import formatFilterRecords from '../src/utils/formatFilterRecords.js';
 
-const DEFAULT_VALUES = [{ createdAt: '', key: '', totalCount: 0 }];
-
 describe('formatFilterRecords', () => {
-    it('returns an array with a single object of default values, when passed empty Object', () => {
-        expect(formatFilterRecords({})).toEqual(DEFAULT_VALUES);
+    it('returns an empty array when passed no arguments', () => {
+        expect(formatFilterRecords()).toEqual([]);
+    });
+
+    it('returns an empty array when passed empty Object', () => {
+        expect(formatFilterRecords({})).toEqual([]);
     });
 });

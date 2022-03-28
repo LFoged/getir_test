@@ -9,7 +9,7 @@ const DB = {
 const dbClient = new MongoClient(DB.URI);
 
 const connectDB = async () => {
-    // connecto to DB server & verify connection
+    // connect to DB server & verify connection
     await dbClient.connect();
     await dbClient.db(DB.NAME).command({ ping: 1 });
 };

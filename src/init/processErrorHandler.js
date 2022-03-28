@@ -4,8 +4,7 @@ import { disconnectDB } from '../services/dbClient.js';
 // close DB connection & terminate process
 const shutdown = () => {
     logger('\n\nLOG: disconnecting DB');
-    disconnectDB()
-        .then(() => logger('LOG: DB disconnected'))
+    disconnectDB().then(() => logger('LOG: DB disconnected'))
         .catch((err) => logger(`ERROR: failed to disconnect DB gracefully\n${err}`))
         .finally(() => {
             logger('LOG: forcibly exiting process');
