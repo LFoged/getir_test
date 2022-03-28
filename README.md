@@ -24,7 +24,7 @@ It responds to `POST` requests at URL: `https://getir-louis-foged.herokuapp.com/
     -  `code` [number] -> `0` on successful requests
     -  `msg` [string] -> `Success` on successful requests
     -  `totalMatches` [integer] -> total number of returned records, that match the specified date & count filters
-    -  `records` [array][objects] -> array of record objects that match the specified date & count filters
+    -  `records` [array] [objects] -> array of record objects that match the specified date & count filters
 
 -   Error responses will return one of the following HTTP statusCodes:
     -  `400`: invalid requests -> input error
@@ -35,7 +35,7 @@ It responds to `POST` requests at URL: `https://getir-louis-foged.herokuapp.com/
     -  `code`: [number] -> a non-0 response code, corresponging to the error type
     -  `error`: [string] -> a description of the error type
     -  `msg`: [string] -> an error message, providing more context into the error
-    -  `errors`: [array?] -> (on input validation errors) an array of objects containing info. on which fields the error(s) occurred and more details about the validation error(s)
+    -  `errors`: [array?] -> (input validation errors) array of objects containing info about the error(s)
 
 ## Running program locally
 
