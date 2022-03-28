@@ -22,6 +22,10 @@ const ALL_ERRORS = [
 ];
 
 describe('validateGetRecords', () => {
+    it('returns object with array of all errors, if passed no arguments.', () => {
+        expect(validateGetRecords()).toEqual({ errors: ALL_ERRORS });
+    });
+
     it('returns object with array of all errors, if passed an empty object.', () => {
         expect(validateGetRecords({})).toEqual({ errors: ALL_ERRORS });
     });

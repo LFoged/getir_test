@@ -1,11 +1,6 @@
 const DATE_FORMAT = 'YYYY-MM-DD';
 const DATE_REGEX = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
-const SCHEMA = {
-    startDate: 'string',
-    endDate: 'string',
-    minCount: 'number',
-    maxCount: 'number',
-};
+const SCHEMA = { startDate: 'string', endDate: 'string', minCount: 'number', maxCount: 'number' };
 
 export default (reqBody = {}) => {
     const errors = Object.keys(SCHEMA).reduce((acc, key) => {
