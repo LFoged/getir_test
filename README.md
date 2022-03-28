@@ -6,11 +6,11 @@ Solution to the 'Getir case study'.
 A `Node.js` REST API, using `express.js` framework.
 
 The app is deployed to Heroku. 
-The app will respond to `POST` requests at URL: `https://git.heroku.com/getir-louis-foged/api/records`. 
+The app will respond to `POST` requests at URL: `https://getir-louis-foged.herokuapp.com/api/records`. 
 
 ## Overview
 
--   The endpoint `https://git.heroku.com/getir-louis-foged/api/records` accepts `POST` requests only.
+-   The endpoint `https://getir-louis-foged.herokuapp.com/api/records` accepts `POST` requests only.
 
 -   Request payload *must* contain the following key/values:
     1.  `startDate` <string> -> format: `YYYY-MM-DD`
