@@ -14,19 +14,19 @@ export default async ({ body }, res, next) => {
         if (!(records && records.length)) {
             return next({ code: 404, msg: 'No records matching the specified "startDate" and "endDate" found.' });
         }
+
+        const filteredRecords = formatFilterRecords({ records, minCount, maxCount });
+        if (!filteredRecords.length) {
+            return next({ code: 404, msg: 'No records matching the specified "minCount" and "maxCount" found.' });
+        }
+
+        return res.status(200).json({
+            code: 0,
+            msg: 'Success',
+            totalMatches: filteredRecords.length,
+            records: filteredRecords,
+        });
     } catch (error) {
         return next(error);
     }
-
-    const filteredRecords = formatFilterRecords({ records, minCount, maxCount });
-    if (!filteredRecords.length) {
-        return next({ code: 404, msg: 'No records matching the specified "minCount" and "maxCount" found.' });
-    }
-
-    return res.status(200).json({
-        code: 0,
-        msg: 'Success',
-        totalMatches: filteredRecords.length,
-        records: filteredRecords,
-    });
 };
