@@ -9,9 +9,13 @@ export default async ({ body }, res, next) => {
         return next({ code: 400, errors });
     }
 
-    const records = await getRecords({ startDate, endDate });
-    if (!(records && records.length)) {
-        return next({ code: 404, msg: 'No records matching the specified "startDate" and "endDate" found.' });
+    try {
+        const records = await getRecords({ startDate, endDate });
+        if (!(records && records.length)) {
+            return next({ code: 404, msg: 'No records matching the specified "startDate" and "endDate" found.' });
+        }
+    } catch (error) {
+        return next(error);
     }
 
     const filteredRecords = formatFilterRecords({ records, minCount, maxCount });
